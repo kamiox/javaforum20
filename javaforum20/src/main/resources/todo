@@ -1,0 +1,34 @@
+Refactor todo list:
+* JavaForum2.0-commons
+** BaseFilter
+** ExtendedFilter
+** ReflectionHelper
+* JavaForum2.0-ejb-commons
+** ClusteredCacheMap
+* JavaForum2.0-war
+
+General TODO list:
+Modify version numbers in pom.xml files (before you create release tag from trunk)!
+Modify version number in JavaForum2.0-commons -> hu.javaforum.commons.StaticData.VERSION field!
+
+Reserved attributes:
+request   hu.javaforum.PerfTime (Long)
+session   hu.javaforum.Locale (Locale)
+request   hu.javaforum.ContextPath (String)
+request   hu.javaforum.Domain (Domain)
+request   hu.javaforum.DomainName (String)
+request   hu.javaforum.Uri (String)
+session   hu.javaforum.CommonPortletSession.captcha (String)
+session   hu.javaforum.CommonPortletSession.captchaNumber (String)
+session   hu.javaforum.Person (Person)
+session   hu.javaforum.PersonUsername (String)
+request   hu.javaforum.RSSBypass (Boolean)
+request   hu.javaforum.Portal (Portal)
+request   hu.javaforum.Design (Design)
+request   hu.javaforum.Page (Page)
+request   hu.javaforum.Layout (Layout)
+request   hu.javaforum.DesignTemplate (String)
+request   hu.javaforum.PageTemplate (String)
+servlet   hu.javaforum.PortletContainer (StaticPortletContainer)
+request   hu.javaforum.PortalURL (PortalURL)
+request   hu.javaforum.RequestData (RequestData)

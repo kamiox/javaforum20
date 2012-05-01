@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>hu.javaforum</groupId>
+    <artifactId>javaforum20-parent</artifactId>
+    <version>1.0.8</version>
+  </parent>
+  
+  <groupId>hu.javaforum</groupId>
+  <artifactId>javaforum20</artifactId>
+  <name>JavaForum2.0 Core</name>
+  <description>JavaForum2.0 Core components</description>
+  <version>1.0.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://traq.javaforum.hu/browse/JFPORTAL</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>http://jenkins.javaforum.hu/job/javaforum20/</url>
+  </ciManagement>
+
+  <scm>
+    <connection>scm:svn:https://svn.javaforum.hu/svn/javaforum20/javaforum20/trunk/javaforum20</connection>
+    <developerConnection>scm:svn:https://svn.javaforum.hu/svn/javaforum20/javaforum20/trunk/javaforum20</developerConnection>
+    <url>scm:svn:https://svn.javaforum.hu/svn/javaforum20/javaforum20/trunk/javaforum20</url>
+  </scm>
+  
+  <modules>
+    <module>javaforum20-commons</module>
+    <!--module>JavaForum2.0-deploy</module-->
+    <!--module>JavaForum2.0-deploy-tld</module-->
+    <!--module>JavaForum2.0-ear</module-->
+    <!--module>JavaForum2.0-ejb-commons</module-->
+    <!--module>JavaForum2.0-ejb-dao</module-->
+    <!--module>JavaForum2.0-ejb-bf</module-->
+    <!--module>JavaForum2.0-ejb-pu</module-->
+    <!--module>JavaForum2.0-ejb-remote</module-->
+    <!--module>JavaForum2.0-entities</module-->
+    <!--module>JavaForum2.0-interfaces-dao</module-->
+    <!--module>JavaForum2.0-interfaces-bf</module-->
+    <!--module>JavaForum2.0-interfaces-remote</module-->
+    <!--module>JavaForum2.0-jmx</module-->
+    <!--module>JavaForum2.0-portal-tld</module-->
+    <!--module>JavaForum2.0-portlets-cms</module-->
+    <!--module>JavaForum2.0-pages</module-->
+    <!--module>JavaForum2.0-war</module-->
+  </modules>
+
+  <dependencies>
+    <!-- The internal dependencies -->
+
+    <!-- The external dependencies -->
+
+    <!-- The container provided dependencies -->
+
+    <!-- The 'transitive' external dependencies -->
+
+    <!-- The 'transitive' container provided dependencies -->
+  </dependencies>
+</project>

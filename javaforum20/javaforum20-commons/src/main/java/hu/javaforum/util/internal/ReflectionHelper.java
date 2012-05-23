@@ -168,7 +168,9 @@ public abstract class ReflectionHelper implements Serializable
       {
         if (XmlElement.class.equals(annotation.annotationType()))
         {
-          return ((XmlElement) annotation).name().toCharArray();
+        	if(!"##default".equals(((XmlElement) annotation).name())) {
+        		return ((XmlElement) annotation).name().toCharArray();
+        	}
         }
       }
     }

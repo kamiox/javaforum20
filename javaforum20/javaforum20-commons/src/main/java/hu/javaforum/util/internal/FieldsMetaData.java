@@ -11,6 +11,8 @@ import hu.javaforum.services.CommonBean;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * This class holds the meta-data of (reflection) fields.
  *
@@ -145,7 +147,29 @@ public final class FieldsMetaData
       parentFields = iterateFields(c.getSuperclass());
     }
 
-    Field[] declaredFields = c.getDeclaredFields();
+    Field[] declaredFields = null;
+    
+    XmlType xmlType = (XmlType) c.getAnnotation(XmlType.class);
+    if(xmlType!=null &&xmlType.propOrder().length>0) {
+    	
+    	declaredFields = new Field[xmlType.propOrder().length];
+    	int i=0;
+    	for(String name : xmlType.propOrder()) {
+    		if("".equals(name)) 
+    			break;
+    		try {
+				declaredFields[i++] = c.getDeclaredField(name);
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			} catch (NoSuchFieldException e) {
+				e.printStackTrace();
+			}
+    	}
+    	
+    } if(declaredFields == null || c.getDeclaredFields().length != declaredFields.length) {
+    	declaredFields = c.getDeclaredFields();
+    }
+    
     Field[] fields = new Field[declaredFields.length + parentFields.length];
     System.arraycopy(declaredFields, 0, fields, 0, declaredFields.length);
     System.arraycopy(parentFields, 0, fields, declaredFields.length, parentFields.length);
